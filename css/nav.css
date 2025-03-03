@@ -1,0 +1,46 @@
+.container_nav {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInNav 2s ease-in forwards;
+    animation-delay: 10s;
+}
+
+@keyframes fadeInNav {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.container_nav ul {
+    display: flex;
+    gap: 22px;
+}
+
+.container_nav li  {
+   display: inline-block;
+}
+
+.container_nav a {
+    font-family: "Abril Fatface", serif;
+    font-size: 1.3rem;
+    color: ghostwhite;
+    transition: "#";
+}
+
+.container_nav a:hover {
+    color: goldenrod;
+}
+

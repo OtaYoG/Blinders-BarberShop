@@ -1,0 +1,186 @@
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg_banner.jpg);
+    filter: contrast(1);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: scale 10s forwards;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.black_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: fadeInBlack 6s forwards;
+}
+
+@keyframes fadeInBlack {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.gradient_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #ffeeac 0%, #5b2c15 100%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.grain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Não bloqueia cliques */
+    background: url(../img/grain2.png);
+    mix-blend-mode:hard-light;
+    opacity: 0.1; /* Ajuste a intensidade do efeito */
+    animation: grain 1s steps(10) infinite;
+}
+
+@keyframes grain {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* --final das animações do banner-- */
+
+
+/* --nav-- */
+.detalhe {
+    text-align: center;
+}
+
+.detalhe_logo {
+    position: relative;
+    top: 300px;
+    width: 180px; 
+    opacity: 0;
+    animation: detalheAnimation 2s ease-in forwards;
+    animation-delay: 10s;
+}
+
+@keyframes detalheAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);    
+    }
+    100% {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+}
+
+.container_logo {
+
+    margin-top: 300px;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    transform: scale(0);
+    opacity: 0;
+    animation: logoAnimation 5s ease-in forwards;
+    animation-delay: 3s ;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: goldenrod;
+    font-family: "Abril Fatface", serif;
+    font-size: 1rem;
+    font-weight:400 ;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-left: 4px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in forwards;
+    animation-delay: 8s;
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.borda {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: scaleBorda 2s ease-in forwards;
+    animation-delay: 9s;
+}
+
+@keyframes scaleBorda {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+hr {
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+    border-top: 1.5px solid goldenrod;
+    margin-top: 10px;
+}
+
